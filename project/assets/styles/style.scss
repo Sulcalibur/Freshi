@@ -1,0 +1,14 @@
+// Bower Imports
+@import "../../../bower_components/jeet/scss/jeet/index.scss";
+
+
+
+@import "base/base";
+@import "layout/layout";
+@import "modules/modules";
+@import "states/states";
+@import "themes/themes";
+
+body {
+  background-color: #E1E1E1;
+}

@@ -1,3 +1,9 @@
+@import "../../../../bower_components/normalize-scss/_normalize.scss";
+
 .base, .working {
-  color: red;
+  color: green;
+}
+
+h1 {
+  color: #4250a8;
 }

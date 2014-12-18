@@ -1,10 +1,12 @@
-var gulp       = require('gulp'),
-    jade       = require('gulp-jade'),
-    prettify   = require('gulp-prettify'),
-    sass       = require('gulp-sass'),
-    uglify     = require('gulp-uglify'),
-    livereload = require('gulp-livereload'),
-    watch      = require('gulp-watch')
+var gulp        = require('gulp'),
+    jade        = require('gulp-jade'),
+    prettify    = require('gulp-prettify'),
+    sass        = require('gulp-sass'),
+    minifyCSS   = require('gulp-minify-css'),
+    uglify      = require('gulp-uglify'),
+    browserSync = require('browser-sync')
+    // livereload  = require('gulp-livereload'),
+    watch       = require('gulp-watch')
     ;
 
   // Markup Tasks
@@ -35,19 +37,37 @@ var gulp       = require('gulp'),
   gulp.task('styles', function() {
     gulp.src('project/assets/styles/*.scss')
     .pipe(sass({
-      style: 'expanded'
+      style: 'compress'
     }))
+    // .pipe(uglify())
+    .pipe(minifyCSS({keepBreaks:true}))
     .pipe(gulp.dest('build/css/'))
+    // .pipe(gulp.dest('build/css/'))
   });
 
+  gulp.task('browser-sync', function () {
+    var files = [
+    'build/**/*.html',
+    'build/css/**/*.css',
+    'build/img/**/*.svg',
+    'build/img/**/*.jpg',
+    'build/img/**/*.gif',
+    'build/img/**/*.png',
+    'build/js/**/*.js'
+    ];
 
-    // Watch Task
-    gulp.task('watch', function() {
-      var server = livereload();
-      gulp.watch('project/*.jade', ['markup']);
-      gulp.watch('project/assets/*.scss', ['styles']);
+    browserSync.init(files, {
+      server: {
+        baseDir: './build'
+      }
     });
+  });
 
+  // Watch Task
+  gulp.task('watch', function() {
+    gulp.watch('project/**/*.jade', ['markup']);
+    gulp.watch('project/assets/styles/**/*.scss', ['styles']);
+  });
 
-    // Default task to be run with `gulp`
-    gulp.task('default', ['markup','styles','watch']);
+  // Default task to be run with `gulp`
+  gulp.task('default', ['markup','styles','watch','browser-sync']);

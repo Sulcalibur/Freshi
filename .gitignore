@@ -1,5 +1,5 @@
-build
-bower_components
-dist
+build/
+bower_components/
+dist/
 npm-debug.log
 LICENCE

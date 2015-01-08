@@ -5,7 +5,13 @@ var gulp        = require('gulp'),
     minifyCSS   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
     browserSync = require('browser-sync')
-    // livereload  = require('gulp-livereload'),
+    // imagemin      = require('gulp-imagemin'),
+    // autoprefix    = require('gulp-autoprefixer'),
+    // notify        = require('gulp-notify'),
+    // uncss         = require('gulp-uncss'),
+    // markdown      = require('gulp-markdown'),
+    // concat        = require('gulp-concat'),
+    // bower         = require('gulp-bower'),
     watch       = require('gulp-watch')
     ;
 

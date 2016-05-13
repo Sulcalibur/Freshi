@@ -4,6 +4,8 @@ dist/
 npm-debug.log
 LICENCE
 dist
+node_modules/
 *.esproj
 *.sublime-project
 *.sublime-workspace
+config.codekit

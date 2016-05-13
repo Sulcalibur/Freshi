@@ -6,7 +6,8 @@
     "modernizr": "~2.8.3",
     "normalize-scss": "~3.0.2",
     "juice": "~1.0.0",
-    "bourbon": "~4.1.0"
+    "bourbon": "~4.1.0",
+    "susy": "~2.2.5"
   },
   "version": "0.0.3",
   "authors": [

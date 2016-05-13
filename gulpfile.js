@@ -4,7 +4,7 @@ var gulp        = require('gulp'),
     sass        = require('gulp-sass'),
     minifyCSS   = require('gulp-minify-css'),
     uglify      = require('gulp-uglify'),
-    browserSync = require('browser-sync')
+    browserSync = require('browser-sync'),
     // imagemin      = require('gulp-imagemin'),
     // autoprefix    = require('gulp-autoprefixer'),
     // notify        = require('gulp-notify'),
@@ -31,11 +31,11 @@ var gulp        = require('gulp'),
 
   // JavaScript Tasks
   gulp.task('scripts', function(){
-    gulp.src('js/*.js')
+    gulp.src('js/*.js');
     gulp.src('bower_components/modernizr/modernizr.js')
     //.pipe(plumber())
     .pipe(uglify())
-    .pipe(gulp.dest('build/assets/js/'))
+    .pipe(gulp.dest('build/assets/js/'));
   });
 
 
@@ -47,7 +47,7 @@ var gulp        = require('gulp'),
     }))
     // .pipe(uglify())
     .pipe(minifyCSS({keepBreaks:true}))
-    .pipe(gulp.dest('build/assets/css/'))
+    .pipe(gulp.dest('build/assets/css/'));
     // .pipe(gulp.dest('build/css/'))
   });
 
@@ -85,4 +85,4 @@ var gulp        = require('gulp'),
   gulp.task('default', ['markup','styles','watch','browser-sync']);
 
   // Kirby Tasks
-  gulp.task('Kirby',['styles','watchkirby'])
+  gulp.task('Kirby',['styles','watchkirby']);

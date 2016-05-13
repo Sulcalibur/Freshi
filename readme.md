@@ -1,7 +1,5 @@
 # Freshi - Starter Template
-
-### Jade Config Settings
-
+## Jade Config Settings
 > Template settings are in the `config.jade` file in `project/assets/templates`. Various settings can be changed and tweaked.
 
 - _ProjectName_: This is your Project Name

@@ -1,6 +1,6 @@
 @import nib
 @import typographic
-$min-font 14px
+// $min-font 14px
 
 @import variables
 @import mixins
@@ -12,15 +12,12 @@ typographic()
 
 body
   background-color #E1E1E1
-  display flex
   color blue
   +below(500px)
     color green
 
-.container
-  lost-utility clearfix
-  lost-center 700px
-  // lost-column 1/12
+p
+  line-height 1.4em
 
 .responsive
   font-size responsive 12px 46px

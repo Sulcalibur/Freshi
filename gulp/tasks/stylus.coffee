@@ -37,10 +37,3 @@ gulp.task 'stylus', ->
   .pipe browserSync.stream()
   .pipe(sourcemaps.write())
 return
-
-
-gulp.task 'cleaning', ->
-  gulp.src('build/css/main.css').pipe(uncss(html: [
-    'build/index.html'
-    'build/posts/**/*.html'
-  ])).pipe gulp.dest('build/css/out/')

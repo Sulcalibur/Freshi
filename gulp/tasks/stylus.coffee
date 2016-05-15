@@ -15,7 +15,7 @@ browserSync  = require('browser-sync').create()
 processors = [
   lost,
   rucksack,
-  autoprefixer
+  autoprefixer(browsers: ['last 2 version'])
 ]
 
 gulp.task 'stylus', ->

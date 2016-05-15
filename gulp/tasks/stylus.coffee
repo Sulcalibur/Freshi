@@ -13,6 +13,7 @@ gulp.task 'stylus', ->
   gulp.src('assets/stylus/main.styl')
   .pipe(sourcemaps.init())
   .pipe(stylus(
+    'include css': true
     use: [
       nib(),
       typographic(),
@@ -25,3 +26,8 @@ gulp.task 'stylus', ->
   .pipe browserSync.stream()
   .pipe(sourcemaps.write())
 return
+
+
+#
+# gulp.src('./app/styl/style.styl')
+#   .pipe(stylus('include css': true)).pipe gulp.dest('./dist/css')

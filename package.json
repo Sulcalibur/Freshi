@@ -35,5 +35,8 @@
     "run-sequence": "^1.1.5",
     "rupture": "^0.6.1",
     "typographic": "^2.9.3"
+  },
+  "devDependencies": {
+    "gulp-evil-icons": "^0.3.0"
   }
 }

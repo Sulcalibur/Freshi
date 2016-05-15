@@ -1,13 +1,22 @@
 gulp         = require('gulp')
 stylus       = require('gulp-stylus')
-postcss      = require('gulp-postcss')
 nib          = require('nib')
 typographic  = require('typographic')
 rupture      = require('rupture')
+csswring     = require('csswring')
+uncss        = require('gulp-uncss')
 lost         = require('lost-stylus')
+rucksack     = require('rucksack-css')
 autoprefixer = require('autoprefixer')
 sourcemaps   = require('gulp-sourcemaps')
+postcss      = require('gulp-postcss')
 browserSync  = require('browser-sync').create()
+
+processors = [
+  lost,
+  rucksack,
+  autoprefixer
+]
 
 gulp.task 'stylus', ->
   gulp.src('assets/stylus/main.styl')
@@ -17,10 +26,12 @@ gulp.task 'stylus', ->
     use: [
       nib(),
       typographic(),
-      rupture()
+      rupture(),
   ]))
-  .pipe(postcss([
-    require('lost')
+  .pipe(postcss(processors))
+  .pipe(uncss(html: [
+    'build/index.html'
+    'build/**/*.html'
   ]))
   .pipe gulp.dest('build/css/')
   .pipe browserSync.stream()
@@ -28,6 +39,8 @@ gulp.task 'stylus', ->
 return
 
 
-#
-# gulp.src('./app/styl/style.styl')
-#   .pipe(stylus('include css': true)).pipe gulp.dest('./dist/css')
+gulp.task 'cleaning', ->
+  gulp.src('build/css/main.css').pipe(uncss(html: [
+    'build/index.html'
+    'build/posts/**/*.html'
+  ])).pipe gulp.dest('build/css/out/')

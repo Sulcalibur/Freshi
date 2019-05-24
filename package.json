@@ -31,7 +31,7 @@
     "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^2.3.1",
     "gulp-util": "^3.0.7",
-    "lost": "^6.7.2",
+    "lost": "^8.3.1",
     "lost-stylus": "^0.1.2",
     "nib": "^1.1.0",
     "phantomjs": "^2.1.7",
@@ -44,7 +44,7 @@
   "devDependencies": {
     "gulp-evil-icons": "^0.3.0",
     "gulp-uncss": "^1.0.5",
-    "lost": "^6.8.0",
+    "lost": "^8.3.1",
     "rucksack-css": "^0.8.6"
   }
 }

@@ -45,6 +45,6 @@
     "gulp-evil-icons": "^0.3.0",
     "gulp-uncss": "^1.0.5",
     "lost": "^6.8.0",
-    "rucksack-css": "^0.8.6"
+    "rucksack-css": "^1.0.2"
   }
 }

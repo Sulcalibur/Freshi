@@ -20,7 +20,7 @@
     "autoprefixer": "^6.3.6",
     "browser-sync": "^2.12.5",
     "coffee-script": "^1.10.0",
-    "csswring": "^5.0.0",
+    "csswring": "^7.0.0",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.0",

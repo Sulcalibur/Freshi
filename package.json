@@ -35,7 +35,7 @@
     "lost-stylus": "^0.1.2",
     "nib": "^1.1.0",
     "phantomjs": "^2.1.7",
-    "require-dir": "^0.3.0",
+    "require-dir": "^1.2.0",
     "run-sequence": "^1.1.5",
     "rupture": "^0.6.1",
     "typographic": "^2.9.3",

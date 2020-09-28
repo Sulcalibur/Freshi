@@ -21,7 +21,7 @@
     "browser-sync": "^2.12.5",
     "coffee-script": "^1.10.0",
     "csswring": "^5.0.0",
-    "del": "^2.2.0",
+    "del": "^6.0.0",
     "gulp": "^3.9.1",
     "gulp-cached": "^1.1.0",
     "gulp-check-unused-css": "^2.1.3",
